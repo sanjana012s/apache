@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sanjana Localhost</title>
+<style>
+    /* Reset */
+    * { margin:0; padding:0; box-sizing: border-box; }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #1abc9c, #16a085);
+        color: #fff;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    h1 {
+        font-size: 3em;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        animation: fadeIn 2s ease-out;
+    }
+
+    .card {
+        background: rgba(0,0,0,0.4);
+        border-radius: 15px;
+        padding: 30px 50px;
+        text-align: center;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+        animation: slideUp 1.5s ease-out;
+    }
+
+    .card p {
+        font-size: 1.2em;
+        margin: 10px 0;
+    }
+
+    .highlight {
+        color: #f1c40f;
+        font-weight: bold;
+    }
+
+    /* Floating dots animation */
+    .dot {
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background: #f1c40f;
+        border-radius: 50%;
+        animation: float 6s infinite;
+        opacity: 0.7;
+    }
+
+    @keyframes float {
+        0% { transform: translateY(100vh) translateX(0); }
+        50% { transform: translateY(50vh) translateX(50px); }
+        100% { transform: translateY(-50vh) translateX(-50px); }
+    }
+
+    @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+    @keyframes slideUp { from { transform: translateY(50px); opacity:0;} to { transform: translateY(0); opacity:1; } }
+</style>
+</head>
+<body>
+
+<h1>🌟 Welcome to Sanjana Localhost 🌟</h1>
+
+<div class="card">
+    <p>Domain: <span class="highlight">sanjana.local</span></p>
+    <p>Server: <span class="highlight">WSL Ubuntu + Apache2</span></p>
+    <p>DNS: <span class="highlight">BIND9 Local</span></p>
+    <p>Status: <span class="highlight">Running ✅</span></p>
+</div>
+
+<!-- Floating dots -->
+<div class="dot" style="left:10%; animation-delay:0s;"></div>
+<div class="dot" style="left:30%; animation-delay:1s;"></div>
+<div class="dot" style="left:50%; animation-delay:2s;"></div>
+<div class="dot" style="left:70%; animation-delay:3s;"></div>
+<div class="dot" style="left:90%; animation-delay:4s;"></div>
+
+</body>
+</html>
